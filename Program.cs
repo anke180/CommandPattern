@@ -19,7 +19,12 @@ namespace CommandPattern
              */
             Light kitchenLight = new Light("Kitchen");
             Light livingRoomLight = new Light("Living Room");
+            CeilingFan livingRoomCeilingFan = new CeilingFan("Living Room");
+            GarageDoor garageDoor = new GarageDoor(kitchenLight);
+            Stereo stereo = new Stereo();
+
             // Define and instantiate an Off and On command for each Vendor class
+
 
             /* Set the On and Off commands to the appropriate slot:
              * 
@@ -29,6 +34,21 @@ namespace CommandPattern
              * 4: Garage door
              * 5: Stereo
              */
+
+            //kitchenLight.On();
+            //kitchenLight.Off();
+
+            //livingRoomLight.On();
+            //livingRoomLight.Off();
+
+            //livingRoomCeilingFan.On();
+            //livingRoomCeilingFan.Off();
+
+            //garageDoor.Up();
+            //garageDoor.Down();
+
+            //stereo.On();
+            //stereo.Off();
 
             Console.WriteLine(remoteControl);
 
