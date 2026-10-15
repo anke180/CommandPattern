@@ -25,7 +25,6 @@ namespace CommandPattern
 
             // Define and instantiate an Off and On command for each Vendor class
 
-
             /* Set the On and Off commands to the appropriate slot:
              * 
              * 1: Living Room light
@@ -35,20 +34,27 @@ namespace CommandPattern
              * 5: Stereo
              */
 
-            //kitchenLight.On();
-            //kitchenLight.Off();
+            Command livingroomLightOn = new LightOnCommand(livingRoomLight);
+            Command livingroomLightOff = new LightOffCommand(livingRoomLight);
 
-            //livingRoomLight.On();
-            //livingRoomLight.Off();
+            Command kitchenLightOn = new LightOnCommand(kitchenLight);
+            Command kitchenLightOff = new LightOffCommand(kitchenLight);
 
-            //livingRoomCeilingFan.On();
-            //livingRoomCeilingFan.Off();
+            Command livingroomCeilingFanHigh = new CeilingFanHighCommand(livingRoomCeilingFan);
+            Command livingroomCeilingFanMedium = new CeilingFanMediumCommand(livingRoomCeilingFan);
+            Command livingroomCeilingFanLow = new CeilingFanLowCommand(livingRoomCeilingFan);
+            Command livingroomCeilingFanOff = new CeilingFanOffCommand(livingRoomCeilingFan);
 
-            //garageDoor.Up();
-            //garageDoor.Down();
+            Command garageDoorUp = new GarageDoorUpCommand(garageDoor);
+            Command garageDoorDown = new GarageDoorDownCommand(garageDoor);
 
-            //stereo.On();
-            //stereo.Off();
+            Command stereoOnWithCd = new StereoOnWithCdCommand(stereo);
+            Command stereoOffWithCd = new StereoOffCommand(stereo);
+            Command stereoOnWithDvd = new StereoOnWithDvdCommand(stereo);
+            Command stereoOffWithDvd = new StereoOffCommand(stereo);
+            Command stereoOnWithRadio = new StereoOnWithRadioCommand(stereo);
+            Command stereoOffWithRadio = new StereoOffCommand(stereo);
+
 
             Console.WriteLine(remoteControl);
 
