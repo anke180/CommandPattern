@@ -59,7 +59,16 @@ namespace CommandPattern
             Console.WriteLine(remoteControl);
 
             // Test the pressing of Buttons here. Don't forget to test the Undo button
+            remoteControl.SetCommand(2, garageDoorUp, garageDoorDown);
+            remoteControl.SetCommand(3, livingroomCeilingFanHigh, livingroomCeilingFanLow);
 
+            Console.WriteLine(remoteControl);
+
+            remoteControl.OnButtonWasPushed(2);
+            remoteControl.OnButtonWasPushed(3);
+
+            remoteControl.OffButtonWasPushed(2);
+            remoteControl.OffButtonWasPushed(3);
 
         }
     }
